@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Sudoku Solver & Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sudoku Master</h1>
+        
+        <div class="stats">
+            <span id="timer">Time: 00:00</span>
+        </div>
+
+        <div id="grid"></div>
+
+        <div class="controls">
+            <button id="generate-btn" class="primary">New Game</button>
+            <button id="solve-btn">Auto-Solve</button>
+            <button id="check-btn">Check Solution</button>
+            <button id="clear-btn">Clear Board</button>
+            <button id="pause-btn">Pause</button>
+        </div>
+        <div class="leaderboard">
+        <h3>Top 10 Leaderboard</h3>
+            <table id="score-table" style="width:100%; margin-top:10px;">
+                <thead>
+                    <tr>
+                     <th>Name</th>
+                        <th>Time (s)</th>
+                 </tr>
+                </thead>
+            <tbody id="leaderboard-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

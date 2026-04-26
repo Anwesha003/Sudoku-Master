@@ -1,0 +1,107 @@
+:root {
+    --bg-color: #fdf6e3; /* Soft yellowish background */
+    --thick-border: 2px solid #000;
+    --thin-border: 0.5px solid #ccc;
+    --button-bg: #800000; /* Deep Maroon */
+    --button-hover: #a00000;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fffef0; /* Slightly lighter yellow for container */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(9, 45px);
+    grid-template-rows: repeat(9, 45px);
+    gap: 0;
+    border: var(--thick-border); 
+    margin: 0 auto 1.5rem;
+    width: fit-content;
+}
+
+input {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: var(--thin-border);
+    outline: none;
+    background: var(--bg-color); /* Applied yellowish tint here */
+    box-sizing: border-box;
+    padding: 0;
+}
+
+/* 3x3 Grid Logic */
+input:nth-child(3n) { border-right: var(--thick-border); }
+input:nth-child(9n) { border-right: var(--thin-border); }
+input:nth-child(n+19):nth-child(-n+27),
+input:nth-child(n+46):nth-child(-n+54) { border-bottom: var(--thick-border); }
+
+/* BUTTON STYLING */
+.controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    color: white;
+    background: var(--button-bg);
+    /* Shadow creates the "rect box behind" 3D look */
+    box-shadow: 0 4px #4d0000;
+    transition: all 0.1s;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+button:hover { background: var(--button-hover); }
+
+button:active {
+    box-shadow: 0 0px #4d0000;
+    transform: translateY(4px);
+}
+
+.primary { background: #1e3a8a; box-shadow: 0 4px #101e4a; } /* Blue variant */
+.primary:hover { background: #2563eb; }
+
+/* Hidden state for pause */
+.paused input { color: transparent !important; text-shadow: 0 0 8px rgba(0,0,0,0.5); }
+
+.leaderboard {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #000;
+}
+
+table {
+    border-collapse: collapse;
+    background: var(--bg-color);
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+}
+
+th { background: #800000; color: white; }
