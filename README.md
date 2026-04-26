@@ -32,8 +32,8 @@ The solver is built using a Recursive Backtracking algorithm. To optimize the $9
 
 | New Game State | Solved State |
 | :---: | :---: |
-| <img src="screenshots/gameplay.png" width="400"> | <img src="screenshots/solved.png" width="400"> |
+| <img src="screenshots/gameplay.png" width="400"> | <img src="screenshots/win-prompt.png" width="400"> |
 
 | Win Notification | Top-10 Leaderboard |
 | :---: | :---: |
-| <img src="screenshots/win-prompt.png" width="400"> | <img src="screenshots/leaderboard.png" width="400"> |
+| <img src="screenshots/solved.png" width="400"> | <img src="screenshots/leaderboard.png" width="400"> |
